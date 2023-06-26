@@ -1,0 +1,66 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model idols {
+  id      Int     @id(map: "idols_pk") @default(autoincrement())
+  user_id Int
+  card_id Int
+  era_id  Int
+  users   users   @relation(fields: [user_id], references: [id], onDelete: NoAction, onUpdate: NoAction)
+  market  market?
+}
+
+model market {
+  id       Int   @id(map: "market_pk") @default(autoincrement())
+  idol_id  Int   @unique
+  price    Int
+  owner_id Int
+  idols    idols @relation(fields: [idol_id], references: [id], onDelete: NoAction, onUpdate: NoAction, map: "market_fk0")
+  users    users @relation(fields: [owner_id], references: [id], onDelete: NoAction, onUpdate: NoAction)
+}
+
+model users {
+  id             Int              @id(map: "users_pk") @default(autoincrement())
+  account_name   String           @unique @db.VarChar(30)
+  password       String           @db.VarChar(60)
+  diamonds       Int              @default(0)
+  peanuts        Int              @default(0)
+  nickname       String?          @db.VarChar(35)
+  gacha_fragment Int?             @default(0)
+  idols          idols[]
+  market         market[]
+  quiz_challenge quiz_challenge[]
+  rank           rank?
+  sessions       sessions[]
+}
+
+model sessions {
+  id     Int    @id @default(autoincrement())
+  token  String
+  userId Int
+  users  users  @relation(fields: [userId], references: [id], onDelete: NoAction, onUpdate: NoAction)
+}
+
+model quiz_challenge {
+  id             Int     @id @default(autoincrement())
+  user_id        Int
+  end_time       Int?
+  points_gain    Int?    @default(0)
+  correct_answer String?
+  users          users   @relation(fields: [user_id], references: [id], onDelete: NoAction, onUpdate: NoAction)
+}
+
+model rank {
+  id      Int   @id @default(autoincrement())
+  user_id Int   @unique(map: "user_unique")
+  points  Int?
+  wins    Int?  @default(0)
+  loses   Int?  @default(0)
+  users   users @relation(fields: [user_id], references: [id], onDelete: NoAction, onUpdate: NoAction)
+}

@@ -1,0 +1,137 @@
+{
+    "categories": {
+        "rarities": [
+            {"id": 1, "rarity": "Artist", "icon": "⭐"},
+            {"id": 2, "rarity": "Famous", "icon": "⭐⭐"},
+            {"id": 3, "rarity": "Star", "icon": "⭐⭐⭐"},
+            {"id": 4, "rarity": "Superstar", "icon": "⭐⭐⭐⭐"},
+            {"id": 5, "rarity": "Idol", "icon": "⭐⭐⭐⭐⭐"},
+            {"id": 6, "rarity": "Super Idol", "icon": "🌟"},
+            {"id": 7, "rarity": "Idol Legend", "icon": "🌠"}
+        ]
+    },
+    "groups": [
+        {
+            "id": 1,
+            "name": "ITZY",
+            "eras": [
+                {"id": 1, "rarity_id": 1, "name": "ITz Different", "image_era": "https://kprofiles.com/wp-content/uploads/2020/01/ITZY_IT27z_Different_online_cover.png"},
+                {"id": 2, "rarity_id": 3, "name": "ITz Icy", "image_era": "https://kprofiles.com/wp-content/uploads/2020/01/ITZY_IT27z_Icy_digital_album_cover.png"},
+                {"id": 3, "rarity_id": 4, "name": "ITz Me", "image_era": "https://kprofiles.com/wp-content/uploads/2020/01/ITz-Me.png"},
+                {"id": 4, "rarity_id": 4, "name": "Not Shy", "image_era": "https://kprofiles.com/wp-content/uploads/2020/01/Not-Shy.jpg"},
+                {"id": 5, "rarity_id": 4, "name": "GUESS WHO", "image_era": "https://kprofiles.com/wp-content/uploads/2020/01/GUESS_WHO_digital_album_cover.jpg"},
+                {"id": 6, "rarity_id": 2, "name": "Crazy in Love", "image_era": "https://kprofiles.com/wp-content/uploads/2020/01/Itzy_Crazy-in-love.jpeg"},
+                {"id": 7, "rarity_id": 4, "name": "Checkmate", "image_era": "https://www.itzyjapan.com/static/itzy/official/feature/checkmate/image/ph_main_j3FyE28m_sp.jpg"},
+                {"id": 8, "rarity_id": 2, "name": "Blah Blah Blah", "image_era": "https://kprofiles.com/wp-content/uploads/2020/01/Itzy_Blah-blah-blah.jpeg"},
+                {"id": 9, "rarity_id": 2, "name": "Boys like you", "image_era": "https://kprofiles.com/wp-content/uploads/2020/01/Itzy_Crazy-in-love.jpeg"},
+                {"id": 10, "rarity_id": 4, "name": "Cheshire", "image_era": "https://recreio.uol.com.br/media/uploads/k-pop/itzy_cheshire_capa.jpg"}
+            ]
+        },
+        {
+            "id": 2,
+            "name": "Sunmi",
+            "eras": [
+                {"id": 1, "rarity_id": 2, "name": "24 Hours", "image_era": "https://kprofiles.com/wp-content/uploads/2020/09/Sunmi_24_Hours_cover_art-800x800.png"},
+                {"id": 2, "rarity_id": 3, "name": "Full Moon", "image_era": "https://kprofiles.com/wp-content/uploads/2020/09/1-800x800.jpg"},
+                {"id": 3, "rarity_id": 5, "name": "GASHINA", "image_era": "https://vignette.wikia.nocookie.net/kpop/images/9/9e/Sunmi_Gashina_digital_cover_art.png"},
+                {"id": 4, "rarity_id": 4, "name": "Heroine", "image_era": "https://vignette.wikia.nocookie.net/kpop/images/c/cd/Sunmi_Heroine_cover_art.png"},
+                {"id": 5, "rarity_id": 4, "name": "WARNING", "image_era": "https://vignette.wikia.nocookie.net/kpop/images/1/19/Sunmi_Warning_digital_album_cover.png"},
+                {"id": 6, "rarity_id": 3, "name": "Noir", "image_era": "https://vignette.wikia.nocookie.net/kpop/images/6/61/Sunmi_Noir_album_cover.png"},
+                {"id": 7, "rarity_id": 3, "name": "LALALAY", "image_era": "https://vignette.wikia.nocookie.net/kpop/images/5/5f/Sunmi_Lalalay_album_cover.png"},
+                {"id": 8, "rarity_id": 2, "name": "XX", "image_era": "https://images.genius.com/374943f2ec10340daf06d0a33614fdf9.600x600x1.jpg"},
+                {"id": 9, "rarity_id": 2, "name": "pporappippam", "image_era": "https://vignette.wikia.nocookie.net/kpop/images/a/a5/Sunmi_Pporappippam_album_cover.png"},
+                {"id": 10, "rarity_id": 4, "name": "1/6", "image_era": "https://kprofiles.com/wp-content/uploads/2020/09/Sunmi-1-6.jpg"},
+                {"id": 11, "rarity_id": 1, "name": "Go or Stop", "image_era": "https://kprofiles.com/wp-content/uploads/2020/09/sunmi-go-or-stop.jpg"},
+                {"id": 12, "rarity_id": 1, "name": "Oh Sorry Ya", "image_era": "https://kprofiles.com/wp-content/uploads/2020/09/sunmi-oh-sorry-ya.jpg"},
+                {"id": 13, "rarity_id": 4, "name": "Heart Burn", "image_era": "https://kprofiles.com/wp-content/uploads/2020/09/sunmi-heart-burn.jpg"}
+            ]
+        },
+        {
+            "id": 3,
+            "name": "StayC",
+            "eras": [
+                {"id": 1, "rarity_id": 3, "name": "Star To A Young Culture", "image_era": "https://kprofiles.com/wp-content/uploads/2020/11/stayc-star-to-a-young-culture.jpg"},
+                {"id": 2, "rarity_id": 2, "name": "STAYDOM", "image_era": "https://kprofiles.com/wp-content/uploads/2020/11/stayc-ctaydom-2.jpg"},
+                {"id": 3, "rarity_id": 3, "name": "STEREOTYPE", "image_era": "https://kprofiles.com/wp-content/uploads/2020/11/stereotype_stayc.jpeg"},
+                {"id": 4, "rarity_id": 4, "name": "YOUNG-LUV.COM", "image_era": "https://kprofiles.com/wp-content/uploads/2020/11/3D725D90-CF17-4436-89D2-4B9CF045CCE6.jpeg"},
+                {"id": 5, "rarity_id": 1, "name": "WE NEED LOVE", "image_era": "https://i.scdn.co/image/ab67616d0000b273c76a0146e4c1804f22cab995"},
+                {"id": 6, "rarity_id": 2, "name": "POPPY", "image_era": "https://i.scdn.co/image/ab67616d0000b2739d7610ec7724bad4e6c9e499"},
+                {"id": 7, "rarity_id": 4, "name": "Teddy Bear", "image_era": "https://kprofiles.com/wp-content/uploads/2020/11/stayc-teddy-bear.jpg"}
+            ]
+        }
+    ],
+    "idols": [
+        {
+            "id": 1,
+            "idol": "Yeji",
+            "group_id": 1,
+            "versions": [
+                {"era_id": 2, "image_url": "https://dbkpop.com/wp-content/uploads/2019/07/ITZY_ICY_Yeji_4.jpg"},
+                {"era_id": 4, "image_url": "https://dbkpop.com/wp-content/uploads/2020/08/itzy_not_shy_concept_Yeji.jpg"},
+                {"era_id": 5, "image_url": "https://dbkpop.com/wp-content/uploads/2019/02/ITZY_DALLA_DALLA_Yeji_5.jpg"},
+                {"era_id": 5, "image_url": "https://dbkpop.com/wp-content/uploads/2020/03/ITZY_Wannabe_MV_Yeji_7.jpg"},
+                {"era_id": 5, "image_url": "https://dbkpop.com/wp-content/uploads/2021/04/ITZY_Mafia_In_The-_Morning_Yeji_5.jpg"},
+                {"era_id": 6, "image_url": "https://dbkpop.com/wp-content/uploads/2021/09/ITZY_Loco_Yeji_1.jpg"},
+                {"era_id": 7, "image_url": "https://dbkpop.com/wp-content/uploads/2022/07/ITZY_Sneakers_Yeji_1.jpg"}
+                
+            ]
+        },
+        {
+            "id": 2,
+            "idol": "Sun Mi",
+            "group_id": 2,
+            "versions": [
+                {"era_id": 1, "image_url": "https://pm1.narvii.com/6462/424459d18e1c9a3bb4655dc9e97a1943b031caf2_hq.jpg"},
+                {"era_id": 2, "image_url": "https://i.pinimg.com/originals/1f/01/16/1f011657c8b35dfdf36cd2be1d0dd650.jpg"},
+                {"era_id": 3, "image_url": "https://pbs.twimg.com/media/E9WMIflXsAkD7Ia.jpg"},
+                {"era_id": 4, "image_url": "https://www.hellokpop.com/wp-content/uploads/2018/01/180119_Sunmi-660x400.jpg"},
+                {"era_id": 5, "image_url": "https://kpopping.com/documents/79/1/1500/optimize_5(18).jpeg"},
+                {"era_id": 6, "image_url": "https://jesususavachanel.files.wordpress.com/2020/04/31b3e-539e73_05b02853921d42d3a52376e0b106a1c4mv2.jpg"},
+                {"era_id": 7, "image_url": "https://sm.mashable.com/mashable_in/seo/8/8411/8411_xmcq.png"},
+                {"era_id": 8, "image_url": "https://thekmeal.com/wp-content/uploads/2020/04/Captura-de-pantalla-2020-04-13-a-las-14.48.49.png"},
+                {"era_id": 9, "image_url": "https://thebiaslistcom.files.wordpress.com/2020/06/sunmi-pporappippam.jpg"},
+                {"era_id": 10, "image_url": "https://akamai.sscdn.co/uploadfile/letras/fotos/a/6/0/c/a60c03249459f2c18c52e0ccb2f643f1.jpg"},
+                {"era_id": 11, "image_url": "https://www.nme.com/wp-content/uploads/2021/10/sunmi-go-or-stop-youtube-abyss-company-111021.jpg"},
+                {"era_id": 12, "image_url": "https://muumuse.com/wp-content/uploads/2022/03/sunmi-oh-sorry-ya-1-683x1024.jpg"},
+                {"era_id": 13, "image_url": "https://s2.glbimg.com/jEfLXjn5ODmPgHQM8yWbOXvC_4Q=/top/e.glbimg.com/og/ed/f/original/2022/06/29/sunmi.jpg"}
+            ]
+        }
+    ],
+    "gachas": [
+        {
+            "id": 1,
+            "name": "Bronze Gacha Pack",
+            "price": 250,
+            "loot": [
+                {"chance": 10000, "cards_id": [
+                    {"idol_id": 1 , "era_id": 1},
+                    {"idol_id": 1, "era_id": 2},
+                    {"idol_id": 2, "era_id": 1},
+                    {"idol_id": 2, "era_id": 2},
+                    {"idol_id": 2, "era_id": 3},
+                    {"idol_id": 2, "era_id": 4},
+                    {"idol_id": 2, "era_id": 5},
+                    {"idol_id": 2, "era_id": 6},
+                    {"idol_id": 2, "era_id": 7},
+                    {"idol_id": 2, "era_id": 8},
+                    {"idol_id": 2, "era_id": 9},
+                    {"idol_id": 2, "era_id": 10},
+                    {"idol_id": 2, "era_id": 11},
+                    {"idol_id": 2, "era_id": 12},
+                    {"idol_id": 2, "era_id": 13}
+                ]}  
+            ]
+        },
+        {
+            "id": 2,
+            "name": "1 Star - Artist Pack",
+            "price": 100,
+            "loot": [
+                {"chance": 10000, "cards_id": [
+                    {"idol_id": 1 , "era_id": 1},
+                    {"idol_id": 2, "era_id": 12}
+                ]}  
+            ]
+        }
+    ]
+}
