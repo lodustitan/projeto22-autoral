@@ -17,7 +17,7 @@ export default function IdolMarket({idol_id, image_url, cardName, cardGroup, car
         const priceNumber = Number(price);
         if(priceNumber < 50) return;
 
-        axios.post(`${process.env.REACT_APP_API_URL}/market/buy`, { marketId: market_id }, { headers: {authorization: `Bearer ${globalVars.cookies.get('usertoken')}`} })
+        axios.post(`${import.meta.env.REACT_APP_API_URL}/market/buy`, { marketId: market_id }, { headers: {authorization: `Bearer ${globalVars.cookies.get('usertoken')}`} })
     }
 
 

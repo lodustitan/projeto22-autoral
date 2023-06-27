@@ -18,14 +18,14 @@ export default function Shop() {
 
     const gacha = (id) => {
         axios
-            .post(`${process.env.REACT_APP_API_URL}/user/gacha`, { gachaId: id }, { headers: { authorization: `Bearer ${globalVars.cookies.get('usertoken')}` } })
+            .post(`${import.meta.env.REACT_APP_API_URL}/user/gacha`, { gachaId: id }, { headers: { authorization: `Bearer ${globalVars.cookies.get('usertoken')}` } })
             .then((el) => {
                 setShopResult(el.data);
             })
     }
 
     useEffect(() => {
-        axios.get(`${process.env.REACT_APP_API_URL}/user/gachaList`)
+        axios.get(`${import.meta.env.REACT_APP_API_URL}/user/gachaList`)
             .then(el => {
                 setShopList(el.data)
             })

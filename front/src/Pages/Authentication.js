@@ -25,7 +25,7 @@ export default function Authentication() {
 
     if (pageLoginType) {
       axios
-        .post(`${process.env.REACT_APP_API_URL}/auth/sign-in`, { account_name: f_login, password: f_pass })
+        .post(`${import.meta.env.REACT_APP_API_URL}/auth/sign-in`, { account_name: f_login, password: f_pass })
         .then(el => {
           globalVars.cookies.set("usertoken", el.data.token);
           globalVars.setAccountName(el.data.userInfos.account_name);
@@ -39,7 +39,7 @@ export default function Authentication() {
     else {
       if (f_pass !== f_cpass) return setWarning("Confime a senha corretamente");
       axios
-        .post(`${process.env.REACT_APP_API_URL}/auth/sign-up`, { account_name: f_login, password: f_pass, nickname: f_nickname })
+        .post(`${import.meta.env.REACT_APP_API_URL}/auth/sign-up`, { account_name: f_login, password: f_pass, nickname: f_nickname })
         .then(el => togglePageType())
         .catch(err => setWarning("Campos inválido"));
 

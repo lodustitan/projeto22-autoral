@@ -20,10 +20,7 @@ services:
       - postgres
   webserver:
     container_name: webserver
-    build: 
-      context: ./front
-      args:
-        - REACT_APP_API_URL=${REACT_APP_API_URL}
+    build: ./front
     volumes:
       - react-volume:/var/www/html
   nginx:
