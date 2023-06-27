@@ -16,7 +16,7 @@ export default function Search() {
 
   const requestSearchIdol = () => {
     axios
-      .get(`${process.env.REACT_APP_API_URL}/idol/search`)
+      .get(`${import.meta.env.REACT_APP_API_URL}/idol/search`)
       .then((res) => {
         console.log(res.data.listIdols);
         setSearch(res.data.listIdols);

@@ -24,7 +24,7 @@ export default function Home() {
       if (isNaN(searchInput)) filter = "idol_name";
       else filter = "idol_id";
 
-      const url = `${process.env.REACT_APP_API_URL}/idols?${filter}=${searchInput}`;
+      const url = `${import.meta.env.REACT_APP_API_URL}/idols?${filter}=${searchInput}`;
 
       axios
         .get(url)
@@ -35,7 +35,7 @@ export default function Home() {
   }
   function refreshInv() {
     axios
-      .get(`${process.env.REACT_APP_API_URL}/user/inv`, { headers: { authorization: `Bearer ${globalVars.cookies.get('usertoken')}` } })
+      .get(`${import.meta.env.REACT_APP_API_URL}/user/inv`, { headers: { authorization: `Bearer ${globalVars.cookies.get('usertoken')}` } })
       .then(el => {
         setInventory(el.data)
       })

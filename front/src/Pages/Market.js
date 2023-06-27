@@ -22,7 +22,7 @@ export default function Market()
         if(searchInput !== "") {
 
             axios
-                .post(`${process.env.REACT_APP_API_URL}/market/search`, { 
+                .post(`${import.meta.env.REACT_APP_API_URL}/market/search`, { 
                     searchString: searchInput,
                     category: 0,
                     orderBy: 0,
@@ -35,7 +35,7 @@ export default function Market()
     }
     useEffect(()=>{
         axios
-            .post(`${process.env.REACT_APP_API_URL}/market/search`, { 
+            .post(`${import.meta.env.REACT_APP_API_URL}/market/search`, { 
                 searchString: searchInput,
                 category: 0,
                 orderBy: 0,

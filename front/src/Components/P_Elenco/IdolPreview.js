@@ -30,7 +30,7 @@ export default function IdolPreview({idol_id, image_url, era_url, cardName, card
         const priceNumber = Number(price);
         if(priceNumber < 50) return;
 
-        await axios.post(`${process.env.REACT_APP_API_URL}/market/sell`, { idolId, price: priceNumber }, { headers: {authorization: `Bearer ${globalVars.cookies.get('usertoken')}`} })
+        await axios.post(`${import.meta.env.REACT_APP_API_URL}/market/sell`, { idolId, price: priceNumber }, { headers: {authorization: `Bearer ${globalVars.cookies.get('usertoken')}`} })
         setShowPopup(false);
     }
 

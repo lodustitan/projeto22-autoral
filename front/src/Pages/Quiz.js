@@ -21,7 +21,7 @@ export default function Quiz()
 
     function requestNewQuiz(){
         axios
-            .post(`${process.env.REACT_APP_API_URL}/user/newquiz`, {}, { headers: {authorization: `Bearer ${globalVars.cookies.get('usertoken')}`} })
+            .post(`${import.meta.env.REACT_APP_API_URL}/user/newquiz`, {}, { headers: {authorization: `Bearer ${globalVars.cookies.get('usertoken')}`} })
             .then((res)=> {
                 console.log(res.data.result)
             });
