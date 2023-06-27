@@ -1,4 +1,4 @@
-export default function m(n,d){
+export default function m(n, d){
     let p=Math.pow
     let dd=p(10,d)
     let s, nn = n;

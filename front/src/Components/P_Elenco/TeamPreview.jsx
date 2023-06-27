@@ -1,5 +1,5 @@
 import styled from "styled-components"
-import abbreviation from "../../Services/NumberAbreviation.js";
+import abbreviation from "../../Services/NumberAbreviation";
 
 import Button from 'react-bootstrap/Button';
 import ButtonGroup from 'react-bootstrap/ButtonGroup';

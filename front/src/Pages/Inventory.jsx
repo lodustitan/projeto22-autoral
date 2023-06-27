@@ -13,29 +13,11 @@ import { GlobalVars } from "../App";
 export default function Home() {
 
   const globalVars = useContext(GlobalVars);
-  const [searchInput, setSearchInput] = useState();
-
-  const [search, setSearch] = useState();
   const [inventory, setInventory] = useState();
 
-  function searchIdol() {
-    if (searchInput !== "") {
-      let filter;
-      if (isNaN(searchInput)) filter = "idol_name";
-      else filter = "idol_id";
-
-      const url = `${import.meta.env.REACT_APP_API_URL}/idols?${filter}=${searchInput}`;
-
-      axios
-        .get(url)
-        .then((res) => {
-          setSearch(res.data);
-        });
-    }
-  }
   function refreshInv() {
     axios
-      .get(`${import.meta.env.REACT_APP_API_URL}/user/inv`, { headers: { authorization: `Bearer ${globalVars.cookies.get('usertoken')}` } })
+      .get(`${import.meta.env.VITE_API_URL}/user/inv`, { headers: { authorization: `Bearer ${globalVars.cookies.get('usertoken')}` } })
       .then(el => {
         setInventory(el.data)
       })

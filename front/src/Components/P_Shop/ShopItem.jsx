@@ -1,10 +1,10 @@
 import styled from "styled-components"
-import abbreviation from "../../Services/NumberAbreviation.js";
+import abbreviation from "../../Services/NumberAbreviation";
 
 import { useNavigate } from "react-router-dom";
 import { useState, useContext } from "react";
 
-import { GlobalVars } from "../../App.js";
+import { GlobalVars } from "../../App";
 import axios from "axios";
 
 export default function ShopItem({shopId, packName, price, onClick})

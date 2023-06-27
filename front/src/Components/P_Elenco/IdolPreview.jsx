@@ -1,6 +1,6 @@
 import styled from "styled-components"
 import {startTransition, useState, useContext} from "react" 
-import abbreviation from "../../Services/NumberAbreviation.js";
+import abbreviation from "../../Services/NumberAbreviation";
 
 import Button from 'react-bootstrap/Button';
 import ProgressBar from 'react-bootstrap/ProgressBar';
@@ -11,7 +11,7 @@ import Overlay from "react-bootstrap/Overlay";
 import { GiBarefoot, GiMicrophone, GiFemaleLegs, GiBookmarklet, GiMagicLamp } from 'react-icons/gi';
 import { BiFlag } from "react-icons/bi";
 
-import PopUp from "../PopUps/PopUp.js";
+import PopUp from "../PopUps/PopUp";
 import axios from "axios";
 import { GlobalVars } from "../../App";
 
@@ -30,7 +30,7 @@ export default function IdolPreview({idol_id, image_url, era_url, cardName, card
         const priceNumber = Number(price);
         if(priceNumber < 50) return;
 
-        await axios.post(`${import.meta.env.REACT_APP_API_URL}/market/sell`, { idolId, price: priceNumber }, { headers: {authorization: `Bearer ${globalVars.cookies.get('usertoken')}`} })
+        await axios.post(`${import.meta.env.VITE_API_URL}/market/sell`, { idolId, price: priceNumber }, { headers: {authorization: `Bearer ${globalVars.cookies.get('usertoken')}`} })
         setShowPopup(false);
     }
 
@@ -87,7 +87,7 @@ const STYLE = styled.div`
         
         @media (min-width: 762px) { height: 60%; width: 100%; }
         @media (max-width: 762px) { height: 50%; width: 100%; }
-1
+
         .idol_infoProfile_rarity {
             padding: 0; margin: 0;
             &>span { font-weight: 300 }

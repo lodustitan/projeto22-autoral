@@ -7,7 +7,7 @@ import { useContext, useEffect, useState } from "react";
 import axios from "axios";
 import ShopItem from "../Components/P_Shop/ShopItem";
 
-import { GlobalVars } from "../App.js";
+import { GlobalVars } from "../App";
 
 export default function Shop() {
     const [shopList, setShopList] = useState();
@@ -18,14 +18,14 @@ export default function Shop() {
 
     const gacha = (id) => {
         axios
-            .post(`${import.meta.env.REACT_APP_API_URL}/user/gacha`, { gachaId: id }, { headers: { authorization: `Bearer ${globalVars.cookies.get('usertoken')}` } })
+            .post(`${import.meta.env.VITE_API_URL}/user/gacha`, { gachaId: id }, { headers: { authorization: `Bearer ${globalVars.cookies.get('usertoken')}` } })
             .then((el) => {
                 setShopResult(el.data);
             })
     }
 
     useEffect(() => {
-        axios.get(`${import.meta.env.REACT_APP_API_URL}/user/gachaList`)
+        axios.get(`${import.meta.env.VITE_API_URL}/user/gachaList`)
             .then(el => {
                 setShopList(el.data)
             })
