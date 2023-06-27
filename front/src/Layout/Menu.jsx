@@ -25,7 +25,7 @@ export default function Menu(){
     const work = (event) => {
         event.stopPropagation();
         axios
-            .post(`${import.meta.env.REACT_APP_API_URL}/user/work`, {}, { headers: {authorization: `Bearer ${globalVars.cookies.get('usertoken')}`} })
+            .post(`${import.meta.env.VITE_API_URL}/user/work`, {}, { headers: {authorization: `Bearer ${globalVars.cookies.get('usertoken')}`} })
             .then(() =>  setShowPopup(!showPopup))
     }
 

@@ -16,7 +16,7 @@ export default function Search() {
 
   const requestSearchIdol = () => {
     axios
-      .get(`${import.meta.env.REACT_APP_API_URL}/idol/search`)
+      .get(`${import.meta.env.VITE_API_URL}/idol/search`)
       .then((res) => {
         console.log(res.data.listIdols);
         setSearch(res.data.listIdols);
@@ -24,17 +24,14 @@ export default function Search() {
   }
   const filterSearch = (el) => {
     let filterSearchVariable; 
-    switch (filterType) {
-      case "name":
-        filterSearchVariable = search.filter(ely => ((ely.idolName).toLowerCase()).includes(el));
-        break;
-      case "era":
-        filterSearchVariable = search.filter(ely => ((ely.eraName).toLowerCase()).includes(el));
-        break;
-      case "group":
-        filterSearchVariable = search.filter(ely => ((ely.groupName).toLowerCase()).includes(el));
-        break;
-    }
+
+      if (filterType === "name"){
+        filterSearchVariable = search.filter((ely) => ((ely.idolName).toLowerCase()).includes(el));
+      } else if (filterType === "era") {
+        filterSearchVariable = search.filter((ely) => ((ely.eraName).toLowerCase()).includes(el));
+      } else if (filterType === "group") {
+        filterSearchVariable = search.filter((ely) => ((ely.groupName).toLowerCase()).includes(el));
+      }
     
     if(el.length === 0) return setFilteredSearch();
 

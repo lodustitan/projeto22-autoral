@@ -29,7 +29,7 @@ export default function TopStatus()
     useEffect(() => {
         if(globalVars.cookies.get('usertoken')){
             axios
-                .post(`${import.meta.env.REACT_APP_API_URL}/auth/auth-session/`, {}, { headers: {authorization: `Bearer ${globalVars.cookies.get('usertoken')}` } })
+                .post(`${import.meta.env.VITE_API_URL}/auth/auth-session/`, {}, { headers: {authorization: `Bearer ${globalVars.cookies.get('usertoken')}` } })
                 .then((el) => {
                     globalVars.setAccountName(el.data.account_name);
                     globalVars.setNickname(el.data.nickname);
