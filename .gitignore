@@ -2,5 +2,4 @@
 /back/.env
 /back/dist
 /front/build
-/front/.env
 /front/node_modules
