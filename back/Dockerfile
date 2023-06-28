@@ -10,4 +10,6 @@ RUN npm install
 
 EXPOSE 4000
 
-CMD npx prisma migrate dev && npx prisma generate && npx ts-node ./src/server.ts
+RUN npm run dev:build
+
+CMD npx prisma migrate dev && npx prisma generate && npm start

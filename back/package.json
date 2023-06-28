@@ -7,7 +7,9 @@
   "scripts": {
     "dev:start": "npx ts-node src/server.ts",
     "dev:seed": "npx prisma db seed",
+    "dev:build": "tsc",
     "migration:run": "prisma migrate deploy",
+    "start": "node dist/server.js",
     "test": "jest"
   },
   "prisma": {
