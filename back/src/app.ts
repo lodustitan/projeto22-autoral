@@ -11,7 +11,7 @@ const app = express();
 
 app.use(express.json());
 app.use(cors());
-app.use("/auth", authRoute);
+app.use("/authentication", authRoute);
 app.use("/user", userRoute);
 app.use("/market", marketRoute);
 app.use("/idol", idolRoute);
