@@ -7,7 +7,7 @@ import authMiddleware from "../middlewares/authentication.middleware";
 const route = Router();
 
 route
-    .get("/gachaList", controller.gacha.getGachaList)
+    .get("/gachalist", controller.gacha.getGachaList)
     .all("*", authMiddleware)
     .post("/work", controller.tools.doWork)
     .post("/gacha", controller.gacha.doGacha)
