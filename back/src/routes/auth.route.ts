@@ -10,8 +10,8 @@ import validateSchema from "../middlewares/validateSchema.middleware";
 const route = Router();
 
 route
-    .post("/auth-session", authMiddleware, controller.auth.auth_session)
-    .post("/sign-in", middleware.login, controller.auth.auth_login)
-    .post("/sign-up", middleware.register, controller.auth.auth_register);
+    .post("/authsession", authMiddleware, controller.auth.auth_session)
+    .post("/signin", middleware.login, controller.auth.auth_login)
+    .post("/signup", middleware.register, controller.auth.auth_register);
 
 export default route;
