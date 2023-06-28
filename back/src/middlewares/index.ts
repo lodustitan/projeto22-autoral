@@ -1,7 +1,6 @@
 import Schemas from "../schemas/model";
 import { StatusCodes } from "http-status-codes";
 import bcrypt from "bcrypt";
-import jwt from "jsonwebtoken";
 
 import { Request, Response, NextFunction } from "express";
 import { usersRepository } from "../repositories";

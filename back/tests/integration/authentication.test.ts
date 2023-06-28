@@ -17,9 +17,9 @@ afterAll(async () => {
 
 const server = supertest(app);
 
-describe('POST /auth/sign-in', () => {
+describe('POST /authentication/signin', () => {
   it('should respond with status 400 when body is not given', async () => {
-    const response = await server.post('/auth/sign-in');
+    const response = await server.post('/authentication/signin');
 
     expect(response.status).toBe(StatusCodes.BAD_REQUEST);
   });
@@ -27,7 +27,7 @@ describe('POST /auth/sign-in', () => {
   it('should respond with status 400 when body is not valid', async () => {
     const invalidBody = { [faker.lorem.word()]: faker.lorem.word() };
 
-    const response = await server.post('/auth/sign-in').send(invalidBody);
+    const response = await server.post('/authentication/signin').send(invalidBody);
 
     expect(response.status).toBe(StatusCodes.BAD_REQUEST);
   });
@@ -43,7 +43,7 @@ describe('POST /auth/sign-in', () => {
       const body = generateValidBody();
       await createUser(body);
 
-      const response = await server.post('/auth/sign-in').send({
+      const response = await server.post('/authentication/signin').send({
         ...body,
         password: "obvioQueNãoÉaSenhaHAHAHA"
       });
@@ -56,7 +56,7 @@ describe('POST /auth/sign-in', () => {
         const body = generateValidBody();
         await createUser(body);
 
-        const response = await server.post('/auth/sign-in').send(body);
+        const response = await server.post('/authentication/signin').send(body);
 
         expect(response.status).toBe(StatusCodes.OK);
       });
@@ -65,7 +65,7 @@ describe('POST /auth/sign-in', () => {
         const body = generateValidBody();
         const user = await createUser(body);
 
-        const response = await server.post('/auth/sign-in').send(body);
+        const response = await server.post('/authentication/signin').send(body);
 
         expect(response.body.userInfos).toEqual({
           account_name: user.account_name,
@@ -80,7 +80,7 @@ describe('POST /auth/sign-in', () => {
         const body = generateValidBody();
         await createUser(body);
 
-        const response = await server.post('/auth/sign-in').send(body);
+        const response = await server.post('/authentication/signin').send(body);
 
         expect(response.body.token).toBeDefined();
       });
@@ -88,9 +88,9 @@ describe('POST /auth/sign-in', () => {
   });
 });
 
-describe('POST /auth/sign-up', () => {
+describe('POST /authentication/signup', () => {
   it('should respond with status 400 when body is not given', async () => {
-    const response = await server.post('/auth/sign-up');
+    const response = await server.post('/authentication/signup');
 
     expect(response.status).toBe(StatusCodes.BAD_REQUEST);
   });
@@ -98,7 +98,7 @@ describe('POST /auth/sign-up', () => {
   it('should respond with status 400 when body is not valid', async () => {
     const invalidBody = { [faker.lorem.word()]: faker.lorem.word() };
 
-    const response = await server.post('/auth/sign-up').send(invalidBody);
+    const response = await server.post('/authentication/signup').send(invalidBody);
 
     expect(response.status).toBe(StatusCodes.BAD_REQUEST);
   });
